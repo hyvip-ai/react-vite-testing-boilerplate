@@ -34,6 +34,44 @@ try {
   process.exit(1);
 }
 
+function createNewPackageJson() {
+  const packageObject = {
+    name: projectName,
+    private: true,
+    version: '0.0.0',
+    scripts: {
+      dev: 'vite',
+      build: 'vite build',
+      preview: 'vite preview',
+      test: 'jest --watchAll',
+    },
+    dependencies: {
+      react: '^18.2.0',
+      'react-dom': '^18.2.0',
+    },
+    devDependencies: {
+      '@babel/preset-env': '^7.19.4',
+      '@babel/preset-react': '^7.18.6',
+      '@testing-library/jest-dom': '^5.16.5',
+      '@testing-library/react': '^13.4.0',
+      '@testing-library/user-event': '^14.4.3',
+      '@types/react': '^18.0.22',
+      '@types/react-dom': '^18.0.7',
+      '@vitejs/plugin-react': '^2.2.0',
+      'babel-jest': '^29.2.2',
+      'identity-obj-proxy': '^3.0.0',
+      jest: '^29.2.2',
+      'jest-environment-jsdom': '^29.2.2',
+      vite: '^3.2.0',
+    },
+  };
+  fs.writeFileSync(
+    `${process.cwd()}/package.json`,
+    JSON.stringify(packageObject, null, 2),
+    'utf8'
+  );
+}
+
 async function main() {
   try {
     console.log(chalk.green('Downloading files...'));
@@ -43,6 +81,7 @@ async function main() {
     console.log(chalk.green('Removing useless files'));
     execSync('npx rimraf ./.git');
     fs.rmSync(path.join(projectPath, 'bin'), { recursive: true });
+    createNewPackageJson();
     console.log(`${chalk.green('Done. Now Run:')}`);
     console.log(`      ${chalk.bold.yellow(`cd ${projectName}`)}`);
     console.log(`      ${chalk.bold.yellow(`yarn || npm install`)}`);
