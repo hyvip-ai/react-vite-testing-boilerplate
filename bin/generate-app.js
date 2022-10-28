@@ -45,8 +45,12 @@ async function main() {
     fs.rmSync(path.join(projectPath, 'bin'), { recursive: true });
     console.log(`${chalk.green('Done. Now Run:')}`);
     console.log(`      ${chalk.bold.yellow(`cd ${projectName}`)}`);
-    console.log(`      ${chalk.bold.yellow(`yarn`)}`);
-    console.log(`      ${chalk.bold.yellow(`yarn dev || yarn test`)}`);
+    console.log(`      ${chalk.bold.yellow(`yarn || npm install`)}`);
+    console.log(
+      `      ${chalk.bold.yellow(
+        `npm run dev || npm run test <> yarn dev || yarn test`
+      )}`
+    );
   } catch (error) {
     console.log(error);
   }
