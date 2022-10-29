@@ -1,5 +1,10 @@
 # vite-react-testing-boilerplate
 
+```
+npx vite-react-testing-boilerplate app-name
+
+```
+
 ---
 
 There are way to many boilerplate template for react but as far as I can say vite is most loved one , also it is fast (extra :) ), but if you want to learn test your react app, the most famous way to do is to create your react app with
