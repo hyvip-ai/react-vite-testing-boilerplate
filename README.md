@@ -44,6 +44,9 @@ render, fireEvent, waitFor, screen
 `"@testing-library/user-event": "^14.4.3"`
 This package is used to fireEvent that users will do on your we website like click a button or type into input field.
 
+`"@testing-library/jest-dom": "^5.16.5"`
+This package is also there, which is an extension of @testing-library/react which provides some custom matchers, which make it easier for jest and @testing-library/react to talk to each other (Is Girl friend's male best friend an idean example of this?).
+
 `"babel-jest": "^29.2.2"`
 This plugin is used to declare that we will use babel as our transpiler with jest
 
