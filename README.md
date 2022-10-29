@@ -1,9 +1,6 @@
 # vite-react-testing-boilerplate
 
-```
-npx vite-react-testing-boilerplate app-name
-
-```
+Execute `npx vite-react-testing-boilerplate app-name` command in the folder where you want your project, and voila you have your project
 
 ---
 
