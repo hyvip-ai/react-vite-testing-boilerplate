@@ -1,6 +1,7 @@
 {
   "name": "vite-react-testing-boilerplate",
   "version": "0.0.0",
+  "description": "Get started with react testing in vite-react template faster.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 
-describe('App Components Tests', () => {
+describe('App Component Tests', () => {
   it('should render developed by rajat', () => {
     render(<App />);
     const textElement = screen.getByText(/developed by rajat/i);
